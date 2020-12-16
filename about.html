@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head lang="en-US">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="./manifest.json" rel="manifest" />
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>-->
+    <script src="js/helper-class.js"></script>
+    <!-- Change names and direcotries of the MVC repositories and files. -->
+    <script src="_model/model.js"></script>
+    <script src="_view/view.js"></script>
+    <script src="_controller/controller.js"></script>
+    <script>
+
+        var Current = {};
+
+        const Model = new modelClass();
+        const View = new viewClass();
+        const Controller = new controlClass();
+
+        // attach eventlisteners start app.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('weatherDataLoaded', View.initPage);
+            Controller.init();
+        });
+    </script>
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="page_head">About</h1>
+    </header>
+    <nav></nav>
+    <main>
+        <div class="container">
+            <h1 class="title">About</h1>
+        </div>
+        <script src="js/main.js"></script>
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="copyright_class">Data4Mat &copy; 2020<br>Chris Johanneson</p>
+        </div>
+    </footer>
+</body>
+
+</html>
